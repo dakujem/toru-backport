@@ -1,5 +1,7 @@
 # Toru 取る (backport for lagacy PHP)
 
+[![Test Suite](https://github.com/dakujem/toru-backport/actions/workflows/php-test.yml/badge.svg)](https://github.com/dakujem/toru-backport/actions/workflows/php-test.yml)
+
 >
 > 💿 `composer require dakujem/toru-backport`
 >
