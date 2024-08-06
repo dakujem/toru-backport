@@ -247,6 +247,8 @@ class Itera
      * Note: Equivalent to `iter\search`, but with the keys being passed to the predicate.
      *
      * @param callable $predicate signature `fn(mixed $value, mixed $key): bool`
+     *
+     * @return mixed
      */
     final public static function search(iterable $input, callable $predicate, $default = null)
     {
@@ -263,6 +265,8 @@ class Itera
      *
      * @param callable $predicate signature `fn(mixed $value, mixed $key): bool`
      * @throws NoMatchingElementFound
+     *
+     * @return mixed
      */
     final public static function searchOrFail(iterable $input, callable $predicate)
     {
@@ -282,6 +286,8 @@ class Itera
      * @see \array_reduce()
      *
      * @param callable $reducer signature fn(mixed $carry, mixed $value, mixed $key): mixed
+     *
+     * @return mixed
      */
     final public static function reduce(iterable $input, callable $reducer, $initial = null)
     {
@@ -295,6 +301,8 @@ class Itera
     /**
      * Returns the first value of an iterable.
      * @throws EmptyCollectionException for empty iterables
+     *
+     * @return mixed
      */
     final public static function firstValue(iterable $input)
     {
@@ -310,6 +318,8 @@ class Itera
      * @throws EmptyCollectionException for empty iterables
      *
      * Note that this can indeed return `mixed`, because generators may yield keys of any type.
+     *
+     * @return mixed
      */
     final public static function firstKey(iterable $input)
     {
@@ -323,6 +333,8 @@ class Itera
     /**
      * Returns the first value of an iterable.
      * Returns the default for empty iterables.
+     *
+     * @return mixed
      */
     final public static function firstValueOrDefault(iterable $input, $default = null)
     {
@@ -335,6 +347,8 @@ class Itera
     /**
      * Returns the first key of an iterable.
      * Returns the default for empty iterables.
+     *
+     * @return mixed
      */
     final public static function firstKeyOrDefault(iterable $input, $default = null)
     {

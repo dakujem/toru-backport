@@ -44,6 +44,10 @@ final class Regenerator implements IteratorAggregate
         );
     }
 
+    /**
+     * @param mixed ...$args
+     * @return mixed
+     */
     public function __invoke(...$args)
     {
         return ($this->callable)(...$args);

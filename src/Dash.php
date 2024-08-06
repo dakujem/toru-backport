@@ -108,6 +108,8 @@ class Dash implements IteratorAggregate
      * The result is returned as-is, without wrapping it into a new wrapper instance.
      *
      * This is a counterpart to the `alter` method that always wraps the result.
+     *
+     * @return mixed
      */
     final public function aggregate(callable $aggregate)
     {

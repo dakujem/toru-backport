@@ -14,6 +14,11 @@ namespace Dakujem\Toru;
  */
 final class Pipeline
 {
+    /**
+     * @param mixed $passable
+     * @param callable ...$stages
+     * @return mixed
+     */
     public static function through($passable, callable ...$stages)
     {
         foreach ($stages as $stage) {
@@ -22,6 +27,11 @@ final class Pipeline
         return $passable;
     }
 
+    /**
+     * @param mixed $passable
+     * @param callable[]|iterable $stages
+     * @return mixed
+     */
     public static function throughStages($passable, iterable $stages)
     {
         return self::through($passable, ...$stages);
