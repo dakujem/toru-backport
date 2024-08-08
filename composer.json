@@ -1,6 +1,6 @@
 {
   "name": "dakujem/toru-backport",
-  "description": "Backport of dakujem/toru",
+  "description": "Backport of dakujem/toru for legacy PHP",
   "license": "Unlicense",
   "authors": [
     {
