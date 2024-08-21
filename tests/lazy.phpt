@@ -5,8 +5,10 @@ declare(strict_types=1);
 use Dakujem\Toru\Dash;
 use Dakujem\Toru\Itera;
 use Tester\Assert;
+use Tester\Environment;
 
 require_once __DIR__ . '/../vendor/autoload.php';
+Environment::setup();
 
 (function () {
     $mapCounter = 0;
@@ -81,7 +83,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
         foreach ($fm as $foo) {
             $foo;
         }
-    }, Exception::class, 'Cannot traverse an already closed generator');
+    }, \Exception::class, 'Cannot traverse an already closed generator');
 })();
 
 (function () {

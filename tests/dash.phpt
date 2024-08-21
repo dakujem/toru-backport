@@ -6,10 +6,12 @@ use Dakujem\Toru\Dash;
 use Dakujem\Toru\IteraFn;
 use Dakujem\Toru\Pipeline;
 use Tester\Assert;
+use Tester\Environment;
 use Tests\Support\Call;
 use Tests\Support\DashTest;
 
 require_once __DIR__ . '/../vendor/autoload.php';
+Environment::setup();
 
 $collection = [
     'a' => 0,
@@ -93,3 +95,7 @@ $expectSum = 13_000;
     );
 })();
 
+(function () use ($collection, $predicate, $mapper, $reducer, $initial, $expectArray, $expectSum) {
+    Assert::type(Iterator::class, Dash::collect([])->toIterator());
+    Assert::type(Traversable::class, Dash::collect([])->ensureTraversable());
+})();
