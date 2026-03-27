@@ -18,6 +18,11 @@ jobs:
         include:
           - php: '7.4'
           - php: '8.0'
+          - php: '8.1'
+          - php: '8.2'
+          - php: '8.3'
+          - php: '8.4'
+          # PHP 8.5 is not supported
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     name: "PHP${{ matrix.php }} ${{ matrix.composer-flags }}"
